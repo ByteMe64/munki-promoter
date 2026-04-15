@@ -1,24 +1,35 @@
 ---
   promotions:
-    autopkg:
-      promote_to:
-        - "staging"
-        - "autopkg"
-    staging:
-      promote_to:
-        - "production"
+    ring0:
       promote_from:
-        - "autopkg"
-        - "staging"
+        - "ring0"
+        - "prod-apps"
+      promote_to:
+        - "ring1"
+        - "ring0"
+        - "prod-apps"
       custom_items:
-        GoogleChrome: 
-          days_in_catalog: 3
-    staging_manual:
+        GoogleChrome:
+          days_in_catalog: 1
+        Firefox:
+          days_in_catalog: 2
+    ring1:
       promote_to:
-        - "production"
+        - "ring2"
+        - "ring1"
+        - "ring0"
+        - "prod-apps"
       promote_from:
-        - "staging"
-      days_in_catalog: 30
-  default_days_in_catalog : 5
-
-
+        - "ring0"
+        - "ring1"
+        - "prod-apps"
+      custom_items:
+        GoogleChrome:
+          days_in_catalog: 1
+        Firefox:
+          days_in_catalog: 2
+  default_days_in_catalog: 3
+  selection:
+    type: exclusion
+    items:
+      - MicrosoftEdge

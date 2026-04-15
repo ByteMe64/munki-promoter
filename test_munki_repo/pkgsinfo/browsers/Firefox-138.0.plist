@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Firefox</string>
+	<key>version</key>
+	<string>138.0</string>
+	<key>catalogs</key>
+	<array>
+		<string>ring0</string>
+		<string>prod-apps</string>
+	</array>
+	<key>_metadata</key>
+	<dict>
+		<key>creation_date</key>
+		<date>2026-04-10T00:00:00Z</date>
+		<key>munki-promoter_edit_date</key>
+		<date>2026-04-10T00:00:00Z</date>
+	</dict>
+</dict>
+</plist>
